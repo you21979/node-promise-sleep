@@ -1,7 +1,7 @@
 {
   "author": "Yuki Akiyama",
   "name": "@you21979/promise-sleep",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "dependencies": {
     "bluebird" : "3.4.*"
