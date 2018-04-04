@@ -41,5 +41,15 @@ describe('test', () => {
             done()
         })
     })
+    it('wait only', (done : callback) => {
+        const ms = 1000
+        const sleeptime = 0.5
+        const base = process.uptime() * ms
+        sleep(sleeptime * ms).then( () => {
+            const  current = process.uptime() * ms
+            assert( current - base >= sleeptime * ms )
+            done()
+        })
+    })
 })
 
