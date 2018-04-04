@@ -1,30 +1,42 @@
 {
-  "author": "Yuki Akiyama",
   "name": "@you21979/promise-sleep",
-  "version": "1.0.1",
-  "private": false,
-  "dependencies": {
-    "bluebird" : "3.4.*"
-  },
-  "readmeFilename": "README.md",
+  "version": "1.1.0",
   "description": "sleep for promise",
-  "main": "index.js",
-  "devDependencies": {
-  },
-  "scripts": {
-    "test": ""
-  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "example",
+    "package.json",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/you21979/node-promise-sleep.git"
+    "url": "git+https://github.com/you21979/node-promise-sleep.git"
   },
   "keywords": [
     "sleep",
     "promise",
     "then"
   ],
+  "devDependencies": {
+    "@types/node": "^9.6.0",
+    "@types/mocha": "^5.0.0",
+    "typescript": "^2.8.0",
+    "istanbul": "^0.4.5",
+    "coveralls": "^3.0.0",
+    "mocha": "^5.0.5"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/tsc -p ./",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha ./dist/test",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+  },
+  "author": "Yuki Akiyama",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/you21979/node-promise-sleep/issues"
   },
-  "license": "MIT"
+  "homepage": "https://github.com/you21979/node-promise-sleep#readme"
 }
