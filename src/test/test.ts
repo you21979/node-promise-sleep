@@ -1,7 +1,7 @@
 import * as assert from 'assert'
 import { sleep } from '../lib/sleep'
 
-type callback = (Error?) => void
+type callback = (e?: Error) => void
 
 describe('test', () => {
     it('zero delay', (done : callback) => {

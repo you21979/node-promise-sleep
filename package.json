@@ -1,6 +1,6 @@
 {
   "name": "@you21979/promise-sleep",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "sleep for promise",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

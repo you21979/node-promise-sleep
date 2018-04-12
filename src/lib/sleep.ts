@@ -1,9 +1,9 @@
 type typeofTimeoutAlias = (callback : () => void, msec : number) => void
 
-export const sleep = (msec : number, value : any = void 0) : Promise<any> => {
-    const f : typeofTimeoutAlias = (msec > 0) ? setTimeout : setImmediate;
-    return new Promise((resolve : (any) => void) => {
-        f(() => {
+export const sleep = <T>(msec : number, value? : T) : Promise<T> => {
+    const f : typeofTimeoutAlias = (msec > 0) ? setTimeout : setImmediate
+    return new Promise((resolve, reject) => {
+        f( () => {
             resolve(value);
         }, msec)
     })
